@@ -11,8 +11,8 @@ class Main extends Controller{
         $this->limit = 5;
         $this->count = $this->model->get_count_task();
         $data['total_page'] = intval(ceil($this->count / $this->limit));
-        $data['sort'] =$_GET['sort'];
-        $this->sort = !empty($data['sort']) ? explode(' ', $data['sort']) : NULL;
+
+        $this->sort = !empty($data['sort']) ? explode(' ', $data['sort']) : ['id', 'desc'];
         $offset = ($data['page'] - 1) * $this->limit;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

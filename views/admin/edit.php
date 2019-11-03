@@ -1,5 +1,8 @@
 <main role="main" class="container">
     <h2>Редактирование задачи</h2>
+    <a class="btn btn-primary" href="/admin">Вернутся к задачам</a>
+    <br>
+    <br>
     <? if(isset($arg['success_massages'])): ?>
         <div class="alert alert-success" role="alert">
             <?=$arg['success_massages']?>
